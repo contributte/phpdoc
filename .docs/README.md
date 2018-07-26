@@ -7,7 +7,7 @@
 
 ## Usage
 
-First of all, register `PhpDocExtension`.
+Register `PhpDocExtension`.
 
 ```yaml
 extensions:
@@ -16,15 +16,13 @@ extensions:
 
 ## Configuration
 
-As you can see, that configuration is by default.
-
 ```yaml
 phpdoc:
-  ignore: 
+  # ignored annotations
+  ignore:
     - persistent
     - serializationVersion
-      
-  cache: auto
-```
 
-You can add more ignored annotations or change cache adapter.
+  # override default cache (default is apcu if available, php file otherwise)
+  cache: Doctrine\Common\Cache\ApcuCache()
+```

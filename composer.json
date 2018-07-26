@@ -1,30 +1,43 @@
 {
   "name": "contributte/phpdoc",
   "description": "Doctrine Annotations for Nette Framework",
-  "keywords": ["nette", "annotataions", "reflection", "phpdoc"],
+  "keywords": [
+    "nette",
+    "annotataions",
+    "reflection",
+    "phpdoc"
+  ],
   "type": "library",
-  "license": "MIT",
+  "license": [
+    "MIT"
+  ],
   "homepage": "https://github.com/contributte/phpdoc",
   "authors": [
     {
-      "name": "Milan Felix Sulc",
+      "name": "Milan Felix Šulc",
       "homepage": "https://f3l1x.io"
     }
   ],
   "require": {
-    "php": ">= 5.6",
-    "nette/reflection": "^2.3.2",
-    "doctrine/annotations": "^1.4.0",
-    "doctrine/cache": "^1.6.2"
+    "php": ">= 7.1",
+    "nette/reflection": "~2.4.2",
+    "doctrine/annotations": "^1.6.0",
+    "doctrine/cache": "^1.7.1"
   },
   "require-dev": {
-    "ninjify/qa": "^0.4.0",
-    "ninjify/nunjuck": "^0.1.4",
-    "nette/di": "^2.4.9"
+    "ninjify/qa": "^0.8.0",
+    "ninjify/nunjuck": "^0.2.0",
+    "nette/di": "~2.4.13"
   },
   "suggest": {
     "nette/di": "to register Nette extensions [PhpDocExtension]"
   },
+  "conflict": {
+    "nette/di": "<2.4.13",
+    "nette/utils": "<2.5.2"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "autoload": {
     "psr-4": {
       "Contributte\\PhpDoc\\": "src"
@@ -41,10 +54,25 @@
       "codesniffer src tests"
     ],
     "tester": [
-      "tester -s -p php --colors 1 -c tests/php-unix.ini tests/cases"
+      "tester -s -p php --colors 1 -C tests/cases"
     ],
-    "tester-coverage": [
-      "tester -s -p php --colors 1 -c tests/php-unix.ini -d extension=xdebug.so --coverage ./coverage.xml --coverage-src ./src tests/cases"
+    "coverage": [
+      "tester -s -p php --colors 1 -C -d extension=xdebug.so --coverage ./coverage.xml --coverage-src ./src tests/cases"
+    ],
+    "phpstan-install": [
+      "mkdir -p temp/phpstan",
+      "composer require -d temp/phpstan phpstan/phpstan:0.10.2",
+      "composer require -d temp/phpstan phpstan/phpstan-nette:0.10.1",
+      "composer require -d temp/phpstan phpstan/phpstan-strict-rules:0.10.1",
+      "composer require -d temp/phpstan phpstan/phpstan-deprecation-rules:0.10.2"
+    ],
+    "phpstan": [
+      "temp/phpstan/vendor/bin/phpstan analyse -l max -c phpstan.neon src"
     ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.3.x-dev"
+    }
   }
 }
