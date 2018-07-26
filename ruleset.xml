@@ -1,13 +1,18 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <ruleset name="Contributte">
-    <!-- Extending rulesets -->
-    <rule ref="vendor/ninjify/coding-standard/ruleset.xml"/>
-    
-    <!-- Contributte -->
-    <rule ref="Squiz.Classes.ClassFileName">
-        <exclude name="Squiz.Classes.ClassFileName.NoMatch"/>
-    </rule>
-    
-    <!-- Exclude folders -->
-    <exclude-pattern>/tests/tmp</exclude-pattern>
+	<!-- Contributte Coding Standard -->
+	<rule ref="./vendor/ninjify/coding-standard/contributte.xml"/>
+
+	<!-- Specific rules -->
+	<rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+		<properties>
+			<property name="rootNamespaces" type="array" value="
+                src=>Contributte\PhpDoc,
+                tests/fixtures=>Tests\Fixtures
+            "/>
+		</properties>
+	</rule>
+
+	<!-- Exclude folders -->
+	<exclude-pattern>/tests/tmp</exclude-pattern>
 </ruleset>

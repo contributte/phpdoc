@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types = 1);
 
 /**
  * Test: DI\PhpDocExtension
@@ -17,14 +17,14 @@ use Tests\Fixtures\Service\FooService;
 require_once __DIR__ . '/../../bootstrap.php';
 
 // Load annotations
-test(function () {
-	$loader = new ContainerLoader(TEMP_DIR, TRUE);
-	$class = $loader->load(function (Compiler $compiler) {
+test(function (): void {
+	$loader = new ContainerLoader(TEMP_DIR, true);
+	$class = $loader->load(function (Compiler $compiler): void {
 		$compiler->addExtension('phpdoc', new PhpDocExtension());
 		$compiler->addConfig([
 			'parameters' => [
 				'tempDir' => TEMP_DIR,
-				'debugMode' => TRUE,
+				'debugMode' => true,
 			],
 		]);
 	}, 1);
