@@ -7,10 +7,10 @@
 [![Build Status](https://img.shields.io/travis/contributte/phpdoc.svg?style=flat-square)](https://travis-ci.org/contributte/phpdoc)
 [![Code coverage](https://img.shields.io/coveralls/contributte/phpdoc.svg?style=flat-square)](https://coveralls.io/r/contributte/phpdoc)
 [![Licence](https://img.shields.io/packagist/l/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
-
 [![Downloads this Month](https://img.shields.io/packagist/dm/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
 [![Downloads total](https://img.shields.io/packagist/dt/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
 [![Latest stable](https://img.shields.io/packagist/v/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
+[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
 
 ## Discussion / Help
 
@@ -48,13 +48,13 @@ composer require contributte/phpdoc
       </td>
       <td align="center">
         <a href="https://github.com/mabar">
-            <img width="150" height="150" src="https://avatars0.githubusercontent.com/u/20974277?s=400&v=4">
+            <img width="150" height="150" src="https://avatars0.githubusercontent.com/u/20974277?s=150&v=4">
         </a>
         </br>
         <a href="https://github.com/mabar">Marek Bartoš</a>
       </td>
     </tr>
-  <tbody>
+  </tbody>
 </table>
 
 ---
