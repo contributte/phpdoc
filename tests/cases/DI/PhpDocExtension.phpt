@@ -9,7 +9,6 @@ use Doctrine\Common\Annotations\Reader;
 use Nette\DI\Compiler;
 use Nette\DI\Container;
 use Nette\DI\ContainerLoader;
-use Nette\Reflection\ClassType;
 use Tester\Assert;
 use Tests\Fixtures\Annotation\Contributte;
 use Tests\Fixtures\Service\FooService;
@@ -22,9 +21,9 @@ test(function (): void {
 	$class = $loader->load(function (Compiler $compiler): void {
 		$compiler->addExtension('phpdoc', new PhpDocExtension());
 		$compiler->addConfig([
-			'parameters' => [
-				'tempDir' => TEMP_DIR,
-				'debugMode' => true,
+			'phpdoc' => [
+				'debug' => true,
+				'temp' => TEMP_DIR,
 			],
 		]);
 	}, 1);
@@ -35,7 +34,7 @@ test(function (): void {
 
 	/** @var Reader $reader */
 	$reader = $container->getByType(Reader::class);
-	$annotations = $reader->getClassAnnotations(ClassType::from(FooService::class));
+	$annotations = $reader->getClassAnnotations(new ReflectionClass(FooService::class));
 
 	Assert::count(1, $annotations);
 	Assert::type(Contributte::class, $annotations[0]);
