@@ -18,12 +18,11 @@
   ],
   "require": {
     "php": "^7.2",
-    "nette/reflection": "~2.4.2",
+    "contributte/di": "^0.4.0",
     "doctrine/annotations": "^1.6.0",
     "doctrine/cache": "^1.7.1"
   },
   "require-dev": {
-    "nette/di": "~2.4.13",
     "ninjify/nunjuck": "^0.2.0",
     "ninjify/qa": "^0.8.0",
     "phpstan/extension-installer": "^1.0",
@@ -32,12 +31,8 @@
     "phpstan/phpstan-shim": "^0.11",
     "phpstan/phpstan-strict-rules": "^0.11"
   },
-  "suggest": {
-    "nette/di": "to register Nette extensions [PhpDocExtension]"
-  },
   "conflict": {
-    "nette/di": "<2.4.13",
-    "nette/utils": "<2.5.2"
+    "nette/di": "<3.0.0"
   },
   "autoload": {
     "psr-4": {
@@ -56,7 +51,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.3.x-dev"
+      "dev-master": "0.4.x-dev"
     }
   }
 }
