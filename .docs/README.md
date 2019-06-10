@@ -1,11 +1,15 @@
-# PHPdoc
+# Contributte PHPdoc
 
 ## Content
 
-- [Extension - how to use](#usage)
-- [Configuration - how to configure](#configuration)
+- [Setup](#setup)
+- [Configuration](#configuration)
 
-## Usage
+## Setup
+
+```bash
+composer require contributte/phpdoc
+```
 
 Register `PhpDocExtension`.
 

@@ -1,8 +1,6 @@
-# Contributte > PHPdoc
+# Contributte PHPdoc
 
-:boom: Enhanced PHPdoc for Nette.
-
------
+Enhanced PHPdoc for Nette.
 
 [![Build Status](https://img.shields.io/travis/contributte/phpdoc.svg?style=flat-square)](https://travis-ci.org/contributte/phpdoc)
 [![Code coverage](https://img.shields.io/coveralls/contributte/phpdoc.svg?style=flat-square)](https://coveralls.io/r/contributte/phpdoc)
@@ -10,17 +8,16 @@
 [![Downloads this Month](https://img.shields.io/packagist/dm/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
 [![Downloads total](https://img.shields.io/packagist/dt/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
 [![Latest stable](https://img.shields.io/packagist/v/contributte/phpdoc.svg?style=flat-square)](https://packagist.org/packages/contributte/phpdoc)
-[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
+[![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
 
 ## Discussion / Help
 
 [![Join the chat](https://img.shields.io/gitter/room/contributte/contributte.svg?style=flat-square)](http://bit.ly/ctteg)
 
-## Install
+## Documentation
 
-```
-composer require contributte/phpdoc
-```
+- [Setup](.docs/README.md#setup)
+- [Configuration](.docs/README.md#configuration)
 
 ## Versions
 
@@ -29,10 +26,6 @@ composer require contributte/phpdoc
 | dev         | `^0.3`  | `master` | `>= 7.1` |
 | stable      | `^0.2`  | `master` | `>= 7.1` |
 | stable      | `^0.1`  | `master` | `>= 5.6` |
-
-## Overview
-
-- [Extension - how to use](/.docs/README.md#usage)
 
 ## Maintainers
 
@@ -56,7 +49,5 @@ composer require contributte/phpdoc
     </tr>
   </tbody>
 </table>
-
----
 
 Thank you for testing, reporting and contributing.
