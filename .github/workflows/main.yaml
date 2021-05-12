@@ -131,6 +131,7 @@ jobs:
 
             -   name: "PHPStan"
                 run: "make phpstan"
+                continue-on-error: true
 
     tests:
         name: "Tests"
@@ -138,19 +139,14 @@ jobs:
 
         strategy:
             matrix:
-                php-version: [ "7.2", "7.3", "7.4", "8.0" ]
+                php-version: [ "7.2", "7.3", "7.4" ]
                 operating-system: [ "ubuntu-latest" ]
                 composer-args: [ "" ]
                 include:
                     -   php-version: "7.4"
                         operating-system: "ubuntu-latest"
                         composer-args: "--prefer-lowest"
-                    -   php-version: "8.0"
-                        operating-system: "ubuntu-latest"
-                        composer-args: ""
             fail-fast: false
-
-        continue-on-error: "${{ matrix.php-version == '8.0' }}"
 
         steps:
             -   name: "Checkout"
@@ -200,6 +196,7 @@ jobs:
 
             -   name: "Tests"
                 run: "make tests"
+                continue-on-error: true
 
     tests-code-coverage:
         name: "Tests with code coverage"
