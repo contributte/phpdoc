@@ -131,7 +131,6 @@ jobs:
 
             -   name: "PHPStan"
                 run: "make phpstan"
-                continue-on-error: true
 
     tests:
         name: "Tests"
@@ -196,7 +195,6 @@ jobs:
 
             -   name: "Tests"
                 run: "make tests"
-                continue-on-error: true
 
     tests-code-coverage:
         name: "Tests with code coverage"
