@@ -15,7 +15,7 @@
 | :warning: | This project is no longer being maintained. Please use [nettrine/annotations](https://github.com/nettrine/annotations).
 |---|---|
 
-| Composer | [`contributte/phpdoc`](https://packagist.org/contributte/phpdoc) |
+| Composer | [`contributte/phpdoc`](https://packagist.org/packages/contributte/phpdoc) |
 |---| --- |
 | Version | ![](https://badgen.net/packagist/v/contributte/phpdoc) |
 | PHP | ![](https://badgen.net/packagist/php/contributte/phpdoc) |
